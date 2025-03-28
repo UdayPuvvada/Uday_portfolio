@@ -46,6 +46,24 @@
       font-size: 0.8rem;
       color: #66ccff;
     }
+    .contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
   </style>
 <style>
     @media (max-width: 768px) {
@@ -85,7 +103,7 @@
 </header>
 <section class="page-section">
 <h2>Contact</h2>
-<form action="https://formspree.io/f/xdkelgbz" method="POST">
+<form id="contact-form" action="https://formspree.io/f/xdkelgbz" method="POST">
 <div class="input-container">
 <input name="name" required="" type="text"/>
 <label>Your Name</label>
@@ -100,7 +118,44 @@
 </div>
 <button class="submit-btn" type="submit">Send Message</button>
 </form>
+<p id="success-message" style="color: #66ff99; display: none; margin-top: 1rem;">Your message was sent successfully!</p>
+<div class="contact-icons">
+  <a href="mailto:udaysujith0@gmail.com" target="_blank" title="Send Email">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/gmail.png" alt="Gmail">
+  </a>
+  <a href="https://www.linkedin.com/in/uday-sujith-02913a148" target="_blank" title="LinkedIn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+  <a href="https://github.com/UdayPuvvada" target="_blank" title="GitHub">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub">
+  </a>
+</div>
 </section>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const successMessage = document.getElementById("success-message");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent normal form submit
+
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        successMessage.style.display = "block";
+      } else {
+        alert("Oops! There was a problem. Try again later.");
+      }
+    });
+  });
+</script>
 </body>
 </html>
 
