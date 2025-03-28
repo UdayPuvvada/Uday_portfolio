@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About – Uday Puvvada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: white;
+      margin: 0;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: slideDown 1s ease forwards;
+    }
+
+    @keyframes slideDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #66ccff;
+    }
+
+    .page-section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      border-bottom: 2px solid #444;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      color: #66ccff;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .about-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 3rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .skill-card {
+      background-color: #1f1f1f;
+      padding: 1.2rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      will-change: transform;
+    }
+
+    .skill-card:hover {
+      transform: scale(1.05) rotateZ(-1deg);
+      box-shadow: 0 10px 25px rgba(102, 204, 255, 0.3);
+    }
+
+    .skill-card h3 {
+      color: #66ccff;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+      border-top: 1px solid #333;
+      margin-top: 3rem;
+      opacity: 0;
+      animation: fadeInFooter 1.5s ease forwards;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInFooter {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Uday Puvvada</strong></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-section">
+    <h2>About Me</h2>
+    <p class="about-text" data-aos="fade-up">
+      I'm Uday Puvvada, a data analyst with a strong foundation in engineering and a passion for storytelling through data.
+      I specialize in building dashboards, predictive models, and automation pipelines that create business value.
+      With hands-on experience across HR analytics, NLP, and time-series forecasting, I bridge the gap between raw data and real-world decision-making.
+    </p>
+
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card" data-aos="zoom-in">
+        <h3>Python</h3>
+        <p>Data analysis, ML models, automation</p>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+        <h3>SQL</h3>
+        <p>Data querying, joins, CTEs</p>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Excel / VBA</h3>
+        <p>Dashboards, advanced formulas, macros</p>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+        <h3>Tableau / Power BI</h3>
+        <p>Data visualization, reporting</p>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+        <h3>TensorFlow / Keras</h3>
+        <p>Deep learning, CNN, LSTM</p>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
+        <h3>Git & GitHub</h3>
+        <p>Version control, collaboration</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2024 Uday Puvvada. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

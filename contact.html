@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact – Uday Puvvada</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .submit-btn {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .input-container {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .input-container input,
+    .input-container textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    .input-container label {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      color: #aaa;
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+
+    .input-container input:focus + label,
+    .input-container input:valid + label,
+    .input-container textarea:focus + label,
+    .input-container textarea:valid + label {
+      top: -10px;
+      left: 5px;
+      font-size: 0.8rem;
+      color: #66ccff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-section">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <div class="input-container">
+        <input type="text" name="name" required />
+        <label>Your Name</label>
+      </div>
+      <div class="input-container">
+        <input type="email" name="email" required />
+        <label>Your Email</label>
+      </div>
+      <div class="input-container">
+        <textarea name="message" rows="4" required></textarea>
+        <label>Your Message</label>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
+</body>
+</html>
