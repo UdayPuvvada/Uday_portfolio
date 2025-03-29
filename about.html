@@ -103,12 +103,38 @@
       animation-delay: 1s;
       animation-fill-mode: forwards;
     }
+    .skills {
+      padding: 3rem 1rem;
+      
+    }
+
+    .skills h2 {
+      color: #66ccff;
+      margin-bottom: 2rem;
+    }
+
+    .skill-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .skill-icons img {
+      width: 60px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-icons img:hover {
+      transform: scale(1.2);
+    }
 
     @keyframes fadeInFooter {
       to {
         opacity: 1;
       }
     }
+
   </style>
 <style>
     @media (max-width: 768px) {
@@ -149,10 +175,23 @@
 <section class="page-section">
 <h2>About Me</h2>
 <p class="about-text" data-aos="fade-up">
-      I'm Uday Puvvada, a data analyst with a strong foundation in engineering and a passion for storytelling through data.
-      I specialize in building dashboards, predictive models, and automation pipelines that create business value.
-      With hands-on experience across HR analytics, NLP, and time-series forecasting, I bridge the gap between raw data and real-world decision-making.
+  I’m Uday Puvvada, a data analyst with a background in biotechnology and a growing passion for turning complex data into clear, actionable insights. My journey began in the life sciences, where I developed a deep respect for experimentation, precision, and storytelling—skills that seamlessly translated into the world of data.
+
+  Whether it’s building predictive models, visualizing performance dashboards, or writing clean, scalable code, I thrive on solving problems that create real impact. I’ve worked with tools like Python, SQL, Tableau, and TensorFlow, and I’m especially drawn to projects at the intersection of data and healthcare, including personalized medicine and genomics.
+  
+  Outside of work, you’ll find me strumming my guitar, cooking up experiments in the kitchen, or reading up on the latest breakthroughs in AI and CRISPR. I believe the best analysts are curious, communicative, and collaborative—and I bring that spirit into every project I take on.
     </p>
+    <section class="skills" data-aos="fade-up">
+      <h2>What I Use</h2>
+      <div class="skill-icons">
+        <img src="https://img.icons8.com/color/48/000000/python.png" title="Python" />
+        <img src="https://img.icons8.com/color/48/000000/sql.png" title="SQL" />
+        <img src="https://img.icons8.com/color/48/000000/ms-excel.png" title="Excel / VBA" />
+        <img src="https://img.icons8.com/color/48/000000/tableau-software.png" title="Tableau / Power BI" />
+        <img src="https://img.icons8.com/color/48/000000/tensorflow.png" title="TensorFlow / Keras" />
+        <img src="https://img.icons8.com/ios-glyphs/48/ffffff/github.png" title="Git & GitHub" />
+      </div>
+    </section>
 <h2>Skills</h2>
 <div class="skills-grid">
 <div class="skill-card" data-aos="zoom-in">
@@ -181,6 +220,7 @@
 </div>
 </div>
 </section>
+
 <footer>
     © 2024 Uday Puvvada. All rights reserved.
   </footer>
