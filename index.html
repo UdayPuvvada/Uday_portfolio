@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Home – Uday Puvvada</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <link rel="stylesheet" href="style.css" />
   <style>
      body {
@@ -34,6 +35,10 @@
 
     .hero {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       padding: 2rem;
       
     }
@@ -156,12 +161,13 @@
         flex-direction: column;
         align-items: flex-start;
       }
-      .hero, .intro, .page-section, .cta-buttons {
+      .hero, .intro, .page-section,.cta-buttons {
         padding: 1rem;
         flex-direction: column !important;
         text-align: center;
         align-items: center;
       }
+       
       .hero-img img {
         width: 180px !important;
         height: 180px !important;
@@ -195,7 +201,6 @@
     </div>
     <p id="typewriter-text"></p>
     <div class="cta-buttons">
-      <a href="projects.html" class="btn">View Projects</a>
       <a href="assets/Uday_Resume.pdf" class="btn-outline" download>Download Resume</a>
       <a href="contact.html" class="btn-outline">Get in Touch</a>
     </div>
