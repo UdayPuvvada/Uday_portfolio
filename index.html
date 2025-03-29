@@ -37,7 +37,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 90vh;
+      height: 80vh;
       text-align: center;
       padding: 2rem;
       
@@ -104,7 +104,7 @@
       justify-content: space-around;
       flex-wrap: wrap;
       max-width: 1000px;
-      margin: 3rem auto;
+      margin: -5rem auto;
       padding: 2rem;
       gap: 2rem;
     }
@@ -113,7 +113,7 @@
       flex: 1 1 250px;
       background-color: #1e1e1e;
       border-radius: 10px;
-      padding: 1.5rem;
+      padding: 0.5rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
@@ -131,9 +131,55 @@
       opacity: 0;
       animation: fadeIn 2s ease-in-out forwards;
     }
+    .hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 50%;
+}
+
+.hero-img img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  margin-top: 1rem;
+}
 
     @keyframes fadeIn {
       to { opacity: 1; }
+    }
+  </style>
+ <style>
+   @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero, .intro, .page-section, .cta-buttons {
+        padding: 1rem;
+        flex-direction: column !important;
+        text-align: center;
+        align-items: center;
+      }
+      .hero-img img {
+        width: 180px !important;
+        height: 180px !important;
+      }
+      .project-card, .skills-grid {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+      }
+      .btn, .btn-outline {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
     }
   </style>
 </head>
@@ -147,14 +193,18 @@
     </nav>
   </header>
   <section class="hero">
+    
     <h1 class="fade-in">Hello, I'm Uday Puvvada</h1>
+    <div class="hero-img">
+      <img src="assets/Uday.jpg" alt="Uday Puvvada" />
+    </div>
     <p id="typewriter-text"></p>
     <div class="cta-buttons">
       <a href="projects.html" class="btn">View Projects</a>
       <a href="assets/Uday_Resume.pdf" class="btn-outline" download>Download Resume</a>
       <a href="contact.html" class="btn-outline">Get in Touch</a>
     </div>
-  
+    
 
   <section class="intro">
     <p>I’m a data analyst with a strong foundation in engineering and a passion for storytelling through data. I specialize in building dashboards, predictive models, and automation pipelines that solve business problems and create impact.</p>
